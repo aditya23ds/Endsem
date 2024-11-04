@@ -1,0 +1,167 @@
+/* Reset basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Navigation styling */
+nav {
+  background-color: #4a90e2;
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: background 0.3s;
+  border-radius: 8px;
+}
+
+nav ul li a:hover {
+  background-color: #357ABD;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #4a90e2, #71b1e4);
+  color: #fff;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* Main content */
+main {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Product styling */
+.product {
+  display: inline-block;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 15px;
+  width: 200px;
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.2s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 1rem;
+  color: #4a90e2;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+button {
+  background-color: #4a90e2;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #357ABD;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #4a90e2;
+  color: #fff;
+  margin-top: 40px;
+}
+
+/* Checkout form */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  font-weight: 500;
+  margin: 10px 0 5px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+}
+
+/* Video section styling */
+.video-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.video-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #4a90e2;
+}

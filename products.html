@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - E-commerce</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Shop</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="signin.html">Sign In</a></li>
+      <li><a href="assets/sample.pdf" download>Download PDF</a></li>
+    </ul>
+  </nav>
+
+  <!-- Products List -->
+  <main>
+    <h2>Our Products</h2>
+
+    <!-- Product List with 10 Items -->
+    <div class="product" data-name="Product A" data-price="20">
+      <img src="images/articuno.png" alt="Product A">
+      <h3>Articuno</h3>
+      <p>$20.00</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Product B" data-price="15">
+      <img src="images/bulbasaur.png" alt="Product B">
+      <h3>Bulbasaur</h3>
+      <p>$15.00</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Product C" data-price="30">
+      <img src="images/charizard.png" alt="Product C">
+      <h3>Charizard</h3>
+      <p>$30.00</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Product D" data-price="25">
+      <img src="images/dragonite.png" alt="Product D">
+      <h3>Dragonite</h3>
+      <p>$25.00</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Product E" data-price="40">
+      <img src="images/lucario.jpg" alt="Product E">
+      <h3>Lucario</h3>
+      <p>$40.00</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Product F" data-price="18">
+      <img src="images/pika.jfif" alt="Product F">
+      <h3>Pikachu</h3>
+      <p>$18.00</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Product G" data-price="22">
+      <img src="images/rayquaza.png" alt="Product G">
+      <h3>Rayquaza</h3>
+      <p>$22.00</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Product H" data-price="35">
+      <img src="images/squirtle.png" alt="Product H">
+      <h3>Squirtle</h3>
+      <p>$35.00</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Product I" data-price="27">
+      <img src="images/staraptor.png" alt="Product I">
+      <h3>Staraptor</h3>
+      <p>$27.00</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Product J" data-price="45">
+      <img src="images/talonflame.jfif" alt="Product J">
+      <h3>Talonflame</h3>
+      <p>$45.00</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 E-commerce Website</p>
+  </footer>
+
+  <!-- JavaScript for adding products to cart -->
+  <script>
+    // Add event listeners to each "Add to Cart" button
+    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+      button.addEventListener('click', (e) => {
+        const product = e.target.closest('.product');
+        const name = product.getAttribute('data-name');
+        const price = product.getAttribute('data-price');
+        
+        // Retrieve the current cart from localStorage or initialize it if empty
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({ name, price });
+        
+        // Update localStorage with the new cart
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${name} added to cart!`);
+      });
+    });
+  </script>
+</body>
+</html>
